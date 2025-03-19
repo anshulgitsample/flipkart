@@ -115,6 +115,15 @@
             .product-container {
                 grid-template-columns: 1fr;
             }
+            .form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
         }
     </style>
 </head>
@@ -129,6 +138,12 @@
             </div>
         {% endfor %}
     </div>
-
+<div class="form">
+    <form method="post">
+        {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="add to cart">
+    </form>
+</div>
 </body>
 </html>
