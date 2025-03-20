@@ -135,6 +135,8 @@
                 <div class="product-price">Rs.{{ pro.price }}</div>
                 <div class="product-description">{{ pro.description }}</div>
                 <a href="#" class="buy-button">Buy Now</a>
+                <a href="{% url 'update_product' pro.id %}"><button type="button">update</button></a>
+                <a href="{% url 'delete_product' pro.id %}"><button type="button">delete</button></a>
             </div>
         {% endfor %}
     </div>
